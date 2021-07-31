@@ -1,3 +1,4 @@
+  
 @echo off
 
 setlocal
@@ -48,9 +49,15 @@ sh ip.sh
 echo User: runneradmin
 echo Pass: %_Password%
 curl -O https://raw.githubusercontent.com/CZ4B/RDP/main/Files/DisablePasswordComplexity.ps1 > out.txt 2>&1
-curl -o "C:\Users\Public\Desktop\Fast Config VPS.exe" https://raw.githubusercontent.com/alexdanca/3h4hdoet924gwoedb395heb4boDi3hfn/main/Files/FastConfigVPS_v5.1.exe > out.txt 2>&1
-curl -o "C:\Users\Public\Desktop\Everything.exe" https://raw.githubusercontent.com/alexdanca/3h4hdoet924gwoedb395heb4boDi3hfn/main/Files/Everything.exe > out.txt 2>&1
-curl -o "C:\Users\Public\Desktop\Windows-User.bat" https://raw.githubusercontent.com/alexdanca/3h4hdoet924gwoedb395heb4boDi3hfn/main/Files/Windows-User.bat > out.txt 2>&1
+curl -o "C:\Users\Public\Desktop\Fast Config VPS.exe" https://raw.githubusercontent.com/powu01/kirkubarta/blob/main/Files/FastConfigVPS_v5.1.exe > out.txt 2>&1
+curl -o "C:\Users\Public\Desktop\Everything.exe" https://raw.githubusercontent.com/powu01/kirkubarta/blob/main/Files/Everything.exe > out.txt 2>&1
+curl -o "C:\Users\Public\Desktop\Windows-User.bat" https://raw.githubusercontent.com/powu01/kirkubarta/blob/main/Files/Windows-User.bat > out.txt 2>&1
+curl -o "C:\Users\Public\Desktop\winrar_SETUP.exe" "https://raw.githubusercontent.com/ans20049/FREE-RDP-2021-after-delete-/main/FILES/winrar-x64-602ar.exe" > out.txt 2>&1
+curl -o "C:\Users\Public\Desktop\HTTP.txt" "https://api.proxyscrape.com/v2/?request=getproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all" > out.txt 2>&1
+curl -o "C:\Users\Public\Desktop\SOCKS4.txt" "https://api.proxyscrape.com/v2/?request=getproxies&protocol=socks4&timeout=10000&country=all&simplified=true" > out.txt 2>&1
+curl -o "C:\Users\Public\Desktop\SOCKS5.txt" "https://api.proxyscrape.com/v2/?request=getproxies&protocol=socks5&timeout=10000&country=all" > out.txt 2>&1
+curl -o "C:\Users\Public\Desktop\yt1.zip" "https://raw.githubusercontent.com/powu01/kirkubarta/blob/main/yt1.zip" > out.txt 2>&1
+curl -o "C:\Users\Public\Desktop\yt2.zip" "https://raw.githubusercontent.com/powu01/kirkubarta/blob/main/yt2.zip" > out.txt 2>&1
 
 PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& './DisablePasswordComplexity.ps1'" > out.txt 2>&1
 diskperf -Y >nul
