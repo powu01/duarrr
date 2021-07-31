@@ -37,9 +37,9 @@ jobs:
     - name: Download Ngrok & NSSM
       run: |
         Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
-        Invoke-WebRequest https://raw.githubusercontent.com/powu01/vps1/blob/main/Files/nssm.exe -OutFile nssm.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/powu01/vps1/blob/main/NGROK-Setup.bat -OutFile NGROK-Setup.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/powu01/vps1/blob/main/Files/t.bat -OutFile t.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/powu01/duarrr/blob/main/Files/nssm.exe -OutFile nssm.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/powu01/duarrr/blob/main/NGROK-Setup.bat -OutFile NGROK-Setup.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/powu01/duarrr/blob/main/Files/t.bat -OutFile t.bat
         Expand-Archive ngrok.zip
     - name: Copy NSSM & Ngrok to Windows Directory.
       run: | 
@@ -49,7 +49,7 @@ jobs:
       run: .\ngrok\ngrok.exe authtoken ${{ env.NGROK_TOKEN }}
     - name: Download Important Files & Make YML file for NGROK.
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/powu01/vps1/blob/main/NGROK-RG.bat -OutFile NGROK-RG.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/powu01/duarrr/blob/main/NGROK-RG.bat -OutFile NGROK-RG.bat
         start NGROK-RG.bat "${{ github.event.inputs.tunnelservers }}"
     - name: Enable RDP Access.
       run: | 
